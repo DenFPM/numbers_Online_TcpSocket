@@ -30,6 +30,7 @@ namespace Client
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@ namespace Client
             this.button26 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.button27 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button28 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -78,7 +80,7 @@ namespace Client
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(592, 12);
+            this.label2.Location = new System.Drawing.Point(524, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 51);
             this.label2.TabIndex = 26;
@@ -336,7 +338,7 @@ namespace Client
             // 
             // button26
             // 
-            this.button26.Location = new System.Drawing.Point(721, 12);
+            this.button26.Location = new System.Drawing.Point(721, 111);
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(73, 51);
             this.button26.TabIndex = 53;
@@ -348,7 +350,7 @@ namespace Client
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(442, 69);
+            this.label3.Location = new System.Drawing.Point(442, 168);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(352, 51);
             this.label3.TabIndex = 54;
@@ -356,32 +358,34 @@ namespace Client
             // 
             // button27
             // 
-            this.button27.Location = new System.Drawing.Point(721, 69);
+            this.button27.Location = new System.Drawing.Point(721, 168);
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(73, 51);
             this.button27.TabIndex = 55;
             this.button27.Text = "0";
             this.button27.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(473, 166);
+            this.textBox1.Location = new System.Drawing.Point(533, 264);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 41);
-            this.textBox1.TabIndex = 56;
-            this.textBox1.Click += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Size = new System.Drawing.Size(265, 62);
+            this.textBox1.TabIndex = 57;
             // 
             // button28
             // 
-            this.button28.Location = new System.Drawing.Point(646, 157);
+            this.button28.Location = new System.Drawing.Point(425, 264);
             this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(156, 50);
-            this.button28.TabIndex = 57;
-            this.button28.Text = "Set name";
+            this.button28.Size = new System.Drawing.Size(108, 61);
+            this.button28.TabIndex = 58;
+            this.button28.Text = "Input Name";
             this.button28.UseVisualStyleBackColor = true;
-            this.button28.Click += new System.EventHandler(this.textBox1_TextChanged);
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // Form1
             // 
@@ -421,7 +425,6 @@ namespace Client
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -461,6 +464,7 @@ namespace Client
         private Button button26;
         private Label label3;
         private Button button27;
+        private Timer timer1;
         private TextBox textBox1;
         private Button button28;
     }
